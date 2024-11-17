@@ -4,7 +4,7 @@ import requests
 from threading import Thread
 
 account = input(
-    'Enter your user:pass:cookie.\n'
+    'Enter your user:Bojangles220pass:Rent0720!cookie.\n'
     'No user:pass? Just do something like random:poop:<cookie>\n'
     '--> '
 )
@@ -31,9 +31,9 @@ pins = [x.split(',')[0] for x in r.splitlines()]
 print('Loaded most common pins.')
 
 r = req.get('https://accountinformation.roblox.com/v1/birthdate').json()
-month = str(r['birthMonth']).zfill(2)
-day = str(r['birthDay']).zfill(2)
-year = str(r['birthYear'])
+month = str(r['jun']).zfill(2)
+day = str(r['7']).zfill(2)
+year = str(r['2016'])
 
 likely = [username[:4], password[:4], username[:2]*2, password[:2]*2, username[-4:], password[-4:], username[-2:]*2, password[-2:]*2, year, day+day, month+month, month+day, day+month]
 likely = [x for x in likely if x.isdigit() and len(x) == 4]
